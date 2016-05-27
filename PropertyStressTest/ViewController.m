@@ -31,7 +31,9 @@
         
         for (int i=0; i<10000; i++) {
             NSLog(@"Setting value to 3");
-            _sampleTester.someInteger = 3;
+            self.sampleTester.someInteger = 3;
+            
+            self.sampleTester.someString = @"Donatello";
         }
     });
     
@@ -40,12 +42,16 @@
         
         for (int i=0; i<10000; i++) {
             NSLog(@"Setting value to 4");
-            _sampleTester.someInteger = 4;
+            self.sampleTester.someInteger = 4;
+            
+            self.sampleTester.someString = @"Raphael";
         }
     });
     
     for (int i=0; i<10000; i++) {
-        NSLog(@"The value of `someInteger` is: %li", (long)_sampleTester.someInteger);
+        NSLog(@"The value of `someInteger` is: %li", (long)self.sampleTester.someInteger);
+        
+        NSLog(@"The value of `someString` is %@", self.sampleTester.someString);
     }
 }
 
